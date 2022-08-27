@@ -57,6 +57,7 @@ static int sumAllFees(int incomeTaxSum, int socialinsuranceSum, int additionalMe
     return incomeTaxSum + socialinsuranceSum + additionalMedicalinsuranceSum + pensionFundSum + charityFeeSum;
 }
 
+// method for getting social insurance
 static int getSocialInsurance(int income)
 {
     int socialinsurance;
