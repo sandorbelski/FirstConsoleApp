@@ -9,8 +9,9 @@ Console.WriteLine(">>>>>>>> hello, welcome to the program version 0.0.3 <<<<<<<<
 string? employeerFNLN;
 
 Console.WriteLine("enter employeer's first & last name: ");
-
+// FIXME: Check value for empty string
 employeerFNLN = Console.ReadLine();
+// TODO: Check empty first name and empty last name
 string[] fnlnArr = employeerFNLN!.Split(" ");
 
 
