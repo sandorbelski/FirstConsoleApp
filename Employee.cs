@@ -19,6 +19,8 @@ namespace FirstConsoleApp
             this.numberOfPassedExams = nopex;
         }
 
+
+        // TODO: Add Description for the method
         public int getIncomeSum(int startIncome) {
             int resultIncome = 0;
             if (this.experienceYears > 5) {
