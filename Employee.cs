@@ -21,13 +21,23 @@ namespace FirstConsoleApp
 
 
         // TODO: Add Description for the method
-        public int getIncomeSum(int startIncome) {
+        public int getIncomeSum(int startIncome)
+        {
             int resultIncome = 0;
             if (this.experienceYears > 5) {
                 resultIncome = startIncome + startIncome / 100 * 10;
             }
             if (this.numberOfPassedExams > 10) {
                 resultIncome = resultIncome / 100 * 15;
+            }
+            if (startIncome <= 0) {
+                resultIncome = -1;
+            }
+            if (this.experienceYears <= 0) {
+                resultIncome = -1;
+            }
+            if (this.numberOfPassedExams <= 0) {
+                resultIncome = -1;
             }
             return resultIncome;
         }
