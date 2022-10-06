@@ -27,8 +27,16 @@ namespace FirstConsoleApp
             if (this.experienceYears > 5) {
                 resultIncome = startIncome + startIncome / 100 * 10;
             }
+            else
+            {
+                resultIncome = startIncome;
+            }
             if (this.numberOfPassedExams > 10) {
-                resultIncome = resultIncome / 100 * 15;
+                resultIncome = resultIncome + resultIncome / 100 * 15;
+            }
+            else
+            {
+                resultIncome = resultIncome;
             }
             if (startIncome <= 0) {
                 resultIncome = -1;
