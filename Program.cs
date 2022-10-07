@@ -4,53 +4,61 @@
 using FirstConsoleApp;
 
 
-Console.WriteLine(">>>>>>>> hello, welcome to the program version 0.0.3 <<<<<<<<<");
+Console.WriteLine(">>>>>>>> hello, welcome to the program version 0.0.4 <<<<<<<<<");
 
 string? employeerFNLN;
 
-Console.WriteLine("enter employeer's first & last name: ");
-// FIXME: Check value for empty string
-employeerFNLN = Console.ReadLine();
-// TODO: Check empty first name and empty last name
-string[] fnlnArr = employeerFNLN!.Split(" ");
+for (int i = 0; i < 3; i++) {
+
+    Console.WriteLine("enter employeer's first & last name: ");
+    // FIXME: Check value for empty string
+    employeerFNLN = Console.ReadLine();
+    // TODO: Check empty first name and empty last name
+    string[] fnlnArr = employeerFNLN!.Split(" ");
 
 
 
-Console.WriteLine("income");
+    Console.WriteLine("income");
 
-int startIncome = Convert.ToInt32(Console.ReadLine());
+    int startIncome = Convert.ToInt32(Console.ReadLine());
 
-Employee epl = new Employee(fnlnArr[0], fnlnArr[1], 7, 10);
+    Employee epl = new Employee(fnlnArr[0], fnlnArr[1], 7, 10);
 
-int income = epl.getIncomeSum(startIncome);
+    int income = epl.getIncomeSum(startIncome);
 
-int incomeTax;
-int socialinsurance;
-int additionalMedicalinsurance;
-int pensionFund;
-int charityFees;
+        if (income == -1) {
+            Console.WriteLine($"startIncome must be more than 0");
+            continue;
+        }
 
-incomeTax = 5;
+    int incomeTax;
+    int socialinsurance;
+    int additionalMedicalinsurance;
+    int pensionFund;
+    int charityFees;
 
-additionalMedicalinsurance = 10;
-pensionFund = 5;
-charityFees = 1;
+    incomeTax = 5;
 
-socialinsurance = getSocialInsurance(income);
+    additionalMedicalinsurance = 10;
+    pensionFund = 5;
+    charityFees = 1;
 
-int incomeTaxSum = income / 100 * incomeTax;
-int socialinsuranceSum = income / 100 * socialinsurance;
-int additionalMedicalinsuranceSum = income / 100 * additionalMedicalinsurance;
-int pensionFundSum = income / 100 * pensionFund;
-int charityFeeSum = income / 100 * charityFees;
+    socialinsurance = getSocialInsurance(income);
 
-int totalFees = sumAllFees(incomeTaxSum, socialinsuranceSum,
-                            additionalMedicalinsuranceSum, pensionFundSum,
-                            charityFeeSum);
+    int incomeTaxSum = income / 100 * incomeTax;
+    int socialinsuranceSum = income / 100 * socialinsurance;
+    int additionalMedicalinsuranceSum = income / 100 * additionalMedicalinsurance;
+    int pensionFundSum = income / 100 * pensionFund;
+    int charityFeeSum = income / 100 * charityFees;
 
-int salarynetto = income - totalFees;
+    int totalFees = sumAllFees(incomeTaxSum, socialinsuranceSum,
+                                additionalMedicalinsuranceSum, pensionFundSum,
+                                charityFeeSum);
 
-printInfo(epl.firstName, epl.lastName, totalFees, salarynetto);
+    int salarynetto = income - totalFees;
+
+    printInfo(epl.firstName, epl.lastName, totalFees, salarynetto);
+}
 
 static int sumAllFees(int incomeTaxSum, int socialinsuranceSum, int additionalMedicalinsuranceSum, int pensionFundSum, int charityFeeSum)
 {
