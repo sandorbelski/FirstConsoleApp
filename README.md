@@ -6,14 +6,13 @@ Solution for a salary calculation
 
 
 How to run:
-dotnetrun
+"dotnetrun"
 
 
-
-How to clean
-dotnet clean
+How to clean:
+"dotnet clean"
 
 
 
 How to deploy:
-dotnet deploy....
+"dotnet deploy...."
