@@ -8,7 +8,6 @@ How to clean
 
 dotnet clean
 
-
-
-
 changes
+
+task 14
