@@ -4,10 +4,15 @@
 
 Solution for a salary calculation
 
-How to clean
 
-dotnet clean
+How to run:
+"dotnetrun"
 
-changes
 
-task 14
+How to clean:
+"dotnet clean"
+
+
+
+How to deploy:
+"dotnet deploy...."
