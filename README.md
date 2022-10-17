@@ -4,11 +4,16 @@
 
 Solution for a salary calculation
 
-How to clean
 
+How to run:
+dotnetrun
+
+
+
+How to clean
 dotnet clean
 
 
 
-
-changes
+How to deploy:
+dotnet deploy....
